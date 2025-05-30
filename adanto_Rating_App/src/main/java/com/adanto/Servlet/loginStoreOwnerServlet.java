@@ -29,7 +29,7 @@ public class loginStoreOwnerServlet extends HttpServlet{
 		System.out.println(sb);
 		if(sb == null) {
 			req.setAttribute("msg", "invalid Login Process.....<br>");
-			req.getRequestDispatcher("Msg.jsp").forward(req, res);
+			req.getRequestDispatcher("storeOwnerMsg.jsp").forward(req, res);
 		}else {
 			Cookie ck = new Cookie("fname", sb.getStoreOwnerName());
 			ServletContext sct = req.getServletContext();
@@ -37,7 +37,7 @@ public class loginStoreOwnerServlet extends HttpServlet{
 			sct.setAttribute("ubean", sb);
 			res.addCookie(ck);
 				//adding cookie is response
-			req.getRequestDispatcher("logSuccess.jsp").forward(req, res);
+			req.getRequestDispatcher("storeOwnerDashboard/storeOwnerDashboard.jsp").forward(req, res);
 	}
 		
 	}

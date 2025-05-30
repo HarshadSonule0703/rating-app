@@ -22,10 +22,12 @@ public class registerStoreOwnerServlet extends HttpServlet{
 		sb.setStoreOwnerName(req.getParameter("ownerName"));
 		sb.setStoreOwnerMail(req.getParameter("email"));
 		sb.setStoreOwnerPass(req.getParameter("password"));
+		System.out.println(req.getParameter("ownerName")+" "+req.getParameter("email")+" "+req.getParameter("password"));
 		int k = new registerStroreOwnerDAO().insert(sb);
+		System.out.println(k);
 		if(k>0) {
 			req.setAttribute("msg", "User Registered Successfully!!<br>");
-			req.getRequestDispatcher("RegSuccess.jsp").forward(req, res);
+			req.getRequestDispatcher("RegSuccessStoreOwner.jsp").forward(req, res);
 		}
 		
 	}

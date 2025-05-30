@@ -12,7 +12,7 @@ public class registerUserDAO {
 		try {
 			Connection con = DBConnection.getConn();
 			PreparedStatement ps = con.prepareStatement
-					("insert into users values(?,?,?)");
+					("INSERT INTO users (username, usermail, userpassword) VALUES (?, ?, ?)");
 			ps.setString(1, ub.getUserName());
 			ps.setString(2, ub.getUserMail());
 			ps.setString(3, ub.getUserPass());			

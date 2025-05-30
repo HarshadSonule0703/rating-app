@@ -70,7 +70,7 @@
     <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
     <button type="submit">Login</button>
   </form>
-  <a href="jsp/loginChoice.jsp" class="back-link">← Back to Choices</a>
+  <a href="loginChoice.jsp" class="back-link">← Back to Choices</a>
 </div>
 
 <script>

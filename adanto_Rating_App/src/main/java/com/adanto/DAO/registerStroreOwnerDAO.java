@@ -13,10 +13,11 @@ public class registerStroreOwnerDAO {
 		try {
 			Connection con = DBConnection.getConn();
 			PreparedStatement ps = con.prepareStatement
-					("insert into store_owner values(?,?,?)");
+					("INSERT INTO store_owner (store_ownername, store_ownermail, store_ownerpassword) VALUES (?, ?, ?)");
 			ps.setString(1, sb.getStoreOwnerName());
 			ps.setString(2, sb.getStoreOwnerMail());
-			ps.setString(3, sb.getStoreOwnerPass());			
+			ps.setString(3, sb.getStoreOwnerPass());
+			System.out.println(sb.getStoreOwnerName()+" "+sb.getStoreOwnerMail()+" "+sb.getStoreOwnerPass());
 			
 			k = ps.executeUpdate();
 			

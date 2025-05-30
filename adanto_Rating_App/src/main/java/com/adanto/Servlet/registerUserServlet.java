@@ -28,7 +28,7 @@ public class registerUserServlet extends HttpServlet{
 		System.out.println(k);
 		if(k>0) {
 			req.setAttribute("msg", "User Registered Successfully!!<br>");
-			req.getRequestDispatcher("RegSuccess.jsp").forward(req, res);
+			req.getRequestDispatcher("RegSuccessUser.jsp").forward(req, res);
 		}
 		
 	}
